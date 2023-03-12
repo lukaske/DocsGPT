@@ -42,7 +42,7 @@ def ingest(yes: bool = typer.Option(False, "-y", "--yes", prompt=False,
                                                    help="Whether to recursively search in subdirectories."),
            limit: Optional[int] = typer.Option(None,
                                                    help="Maximum number of files to read."),
-           formats: Optional[List[str]] = typer.Option([".rst", ".md", ".sol"],
+           formats: Optional[List[str]] = typer.Option([".rst", ".md", ".sol", ".json", ".ts"],
                                                    help="""List of required extensions (list with .)
                                                         Currently supported: .rst, .md, .pdf, .docx, .csv, .epub, .html"""),
            exclude: Optional[bool] = typer.Option(True, help="Whether to exclude hidden files (dotfiles).")):
